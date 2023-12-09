@@ -1,0 +1,15 @@
+.LogForm {
+	padding: 1rem;
+	background-color: var(--fourthly-color);
+	border-radius: var(--border-radius);
+
+	.FormContiner {
+		form {
+			display: flex;
+			flex-direction: column;
+			input {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}

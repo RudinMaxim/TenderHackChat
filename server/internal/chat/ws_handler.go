@@ -1,7 +1,8 @@
-package chat
+package ws
 
 import (
 	"github.com/gin-gonic/gin"
+	"golang.org/x/net/websocket"
 	"net/http"
 )
 
@@ -36,7 +37,7 @@ func (h *Handler) CreateRoom(c *gin.Context) {
 	c.JSON(http.StatusOK, req)
 }
 
-var upgrader = websocket.Upgrader{
+var upgrader = websocket.Config{
 	ReadBufferSize:  1024,
 	WriteBufferSize: 1024,
 	CheckOrigin: func(r *http.Request) bool {
